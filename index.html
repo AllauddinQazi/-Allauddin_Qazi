@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allauddin Qazi | IT Infrastructure & Systems Administrator</title>
+<meta name="description" content="Experienced IT Infrastructure & Systems Administrator based in Pakistan. Expert in Cisco networking, Windows Server, VMware, Core Banking IT, and enterprise security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#060C18;--bg2:#0A1225;--bg3:#0E1830;
+--card:#111E35;--card2:#172540;
+--border:#1B2B45;--border2:#243550;
+--cyan:#00C8F0;--green:#00E887;--orange:#FF6B35;--purple:#A78BFA;
+--text:#C8DEFF;--muted:#4A6080;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,200,240,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,240,.018) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(6,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.logo{font-family:'JetBrains Mono',monospace;font-size:1rem;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:.3rem}
+.logo-lt,.logo-gt{color:var(--cyan)}.logo-slash{color:var(--green)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-cv{display:inline-flex;align-items:center;gap:.4rem;background:var(--cyan);color:var(--bg);padding:.38rem 1rem;border-radius:4px;font-size:.76rem;font-weight:700;text-decoration:none;transition:opacity .2s}
+.nav-cv:hover{opacity:.85}
+
+/* HERO */
+#home{min-height:100vh;display:flex;align-items:center;padding:80px 5% 60px;position:relative;z-index:1;gap:4rem;flex-wrap:wrap}
+.hero-left{flex:1;min-width:300px;max-width:620px}
+.hero-right{flex:0 0 360px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--green);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--green)}
+h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.06;color:var(--white);letter-spacing:-.025em;margin-bottom:.5rem}
+.h1-sub{color:var(--cyan)}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--muted);margin-bottom:1.4rem}
+.hero-tag .hl{color:var(--orange)}
+.hero-desc{font-size:.95rem;color:var(--text);opacity:.82;max-width:500px;margin-bottom:2rem;line-height:1.8}
+.status-pill{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(0,232,135,.3);background:rgba(0,232,135,.06);border-radius:100px;padding:.28rem .9rem;font-size:.72rem;color:var(--green);margin-bottom:1.4rem;font-family:'JetBrains Mono',monospace}
+.sdot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:sdot 1.6s infinite}
+@keyframes sdot{0%,100%{opacity:1}50%{opacity:.2}}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;background:var(--cyan);color:var(--bg);padding:.68rem 1.5rem;border-radius:5px;font-weight:700;font-size:.84rem;text-decoration:none;transition:opacity .2s}
+.btn-p:hover{opacity:.86}
+.btn-s{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border2);color:var(--text);padding:.68rem 1.5rem;border-radius:5px;font-size:.84rem;text-decoration:none;transition:border-color .2s,color .2s}
+.btn-s:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn-cv{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(0,232,135,.35);color:var(--green);padding:.68rem 1.5rem;border-radius:5px;font-size:.84rem;text-decoration:none;transition:all .2s}
+.btn-cv:hover{background:rgba(0,232,135,.08)}
+.social-row{display:flex;gap:1rem}
+.soc-link{width:36px;height:36px;border:1px solid var(--border2);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:.8rem;font-weight:600;transition:border-color .2s,color .2s}
+.soc-link:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* TERMINAL */
+.terminal{background:#060E1C;border:1px solid var(--border2);border-radius:12px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:.76rem;box-shadow:0 0 60px rgba(0,200,240,.06)}
+.tbar{background:#0A1628;padding:.6rem 1rem;display:flex;align-items:center;gap:.45rem;border-bottom:1px solid var(--border)}
+.td{width:11px;height:11px;border-radius:50%}
+.ttitle{color:var(--muted);font-size:.68rem;margin-left:.4rem;flex:1}
+.tping{color:var(--green);font-size:.65rem}
+.tbody{padding:1.2rem 1.4rem 1.6rem;line-height:2.1}
+.tp{color:var(--green)}.tc{color:var(--cyan)}.tm{color:var(--muted)}.tw{color:var(--white)}.to{color:var(--orange)}.tpu{color:var(--purple)}
+.cur{display:inline-block;width:7px;height:13px;background:var(--cyan);vertical-align:middle;animation:cb .9s infinite}
+@keyframes cb{0%,100%{opacity:1}50%{opacity:0}}
+
+/* STATS */
+.stats-bar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.2rem 5%;display:flex;position:relative;z-index:1}
+.stat-it{flex:1;text-align:center;position:relative;padding:0 .5rem}
+.stat-it:not(:last-child)::after{content:'';position:absolute;right:0;top:15%;height:70%;width:1px;background:var(--border)}
+.stat-n{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:600;color:var(--cyan);display:block}
+.stat-l{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:.15rem}
+
+/* SECTION BASE */
+section{padding:90px 5%;position:relative;z-index:1}
+.slabel{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.4rem}
+.stitle{font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:800;color:var(--white);letter-spacing:-.02em;margin-bottom:.35rem}
+.ssub{font-size:.88rem;color:var(--muted);margin-bottom:3rem}
+.alt-bg{background:var(--bg2)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-text p{font-size:.92rem;color:var(--text);opacity:.85;line-height:1.85;margin-bottom:1rem}
+
+/* profile pic */
+.profile-pic-wrap{display:flex;flex-direction:column;align-items:center;gap:1.4rem}
+.profile-pic-ring{width:180px;height:180px;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--cyan),var(--green));flex-shrink:0}
+.profile-pic-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--card);display:flex;align-items:center;justify-content:center;font-size:3.5rem;font-weight:800;color:var(--cyan);font-family:'JetBrains Mono',monospace;letter-spacing:-.05em}
+.profile-pic-inner img{width:100%;height:100%;object-fit:cover}
+.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;width:100%}
+.fact-box{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.fact-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem}
+.fact-val{font-size:.88rem;color:var(--white);font-weight:600}
+
+/* SKILLS */
+.skills-cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem}
+.sk-group{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.4rem;transition:border-color .25s}
+.sk-group:hover{border-color:var(--border2)}
+.sk-group-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem}
+.sk-ico{width:34px;height:34px;border-radius:7px;background:rgba(0,200,240,.07);border:1px solid rgba(0,200,240,.14);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.sk-group-name{font-size:.78rem;font-weight:600;color:var(--cyan);text-transform:uppercase;letter-spacing:.08em}
+.sk-bars{display:flex;flex-direction:column;gap:.7rem}
+.sk-bar-top{display:flex;justify-content:space-between;margin-bottom:.3rem}
+.sk-bar-name{font-size:.79rem;color:var(--text)}
+.sk-bar-pct{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted)}
+.sk-bar-bg{height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.sk-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--cyan),var(--green));width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+
+/* EXPERIENCE */
+.exp-wrap{display:grid;grid-template-columns:220px 1fr;gap:2.5rem}
+.exp-tabs{display:flex;flex-direction:column;gap:.3rem}
+.etab{padding:.65rem .9rem;border-radius:6px;border:1px solid transparent;cursor:pointer;transition:all .2s}
+.etab.on{background:var(--card);border-color:var(--border2)}
+.etab:hover:not(.on){background:rgba(255,255,255,.03)}
+.etab-role{font-size:.82rem;font-weight:600;color:var(--text);transition:color .2s}
+.etab.on .etab-role{color:var(--cyan)}
+.etab-co{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted);margin-top:.1rem}
+.etab-dot{width:6px;height:6px;border-radius:50%;background:var(--border2);display:inline-block;margin-right:.5rem;vertical-align:middle;transition:background .2s}
+.etab.on .etab-dot{background:var(--green)}
+.epanel{display:none}.epanel.on{display:block}
+.ep-role{font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:.4rem}
+.ep-meta{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;margin-bottom:.9rem}
+.ep-co{font-size:.86rem;color:var(--cyan);font-weight:500}
+.ep-date{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:4px;padding:.18rem .55rem}
+.ep-badge{font-size:.65rem;color:var(--green);background:rgba(0,232,135,.08);border:1px solid rgba(0,232,135,.2);border-radius:3px;padding:.12rem .45rem;text-transform:uppercase;letter-spacing:.07em}
+.ep-summary{font-size:.84rem;color:var(--muted);margin-bottom:1rem;font-style:italic;line-height:1.65;border-left:2px solid var(--cyan);padding-left:.8rem}
+.ep-list{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.ep-list li{font-size:.86rem;color:var(--text);padding-left:1.3rem;position:relative;line-height:1.7}
+.ep-list li::before{content:'▸';position:absolute;left:0;color:var(--cyan);font-size:.68rem;top:.3rem}
+.ep-list li b{color:var(--white);font-weight:600}
+.ep-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem}
+.ep-tag{font-family:'JetBrains Mono',monospace;font-size:.67rem;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:3px;padding:.15rem .45rem}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+.svc-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;transition:border-color .25s,transform .25s;position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--green));opacity:0;transition:opacity .3s}
+.svc-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.svc-card:hover::after{opacity:1}
+.svc-ico{font-size:1.6rem;margin-bottom:.9rem}
+.svc-name{font-size:.88rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+.svc-desc{font-size:.8rem;color:var(--muted);line-height:1.7}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem}
+.blog-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .25s,transform .25s;text-decoration:none;display:flex;flex-direction:column}
+.blog-card:hover{border-color:var(--cyan);transform:translateY(-3px)}
+.blog-img{width:100%;height:150px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;background:var(--bg3)}
+.blog-body{padding:1.2rem;flex:1;display:flex;flex-direction:column}
+.blog-cat{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.5rem}
+.blog-title{font-size:.9rem;font-weight:700;color:var(--white);margin-bottom:.5rem;line-height:1.5}
+.blog-excerpt{font-size:.78rem;color:var(--muted);line-height:1.65;flex:1}
+.blog-footer{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--border)}
+.blog-date{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted)}
+.blog-read{font-size:.72rem;color:var(--cyan)}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.3rem;display:flex;align-items:flex-start;gap:.9rem;transition:border-color .2s,transform .2s;text-decoration:none}
+.cert-card:hover{border-color:var(--green);transform:translateY(-2px)}
+.cert-ico{width:40px;height:40px;border-radius:9px;background:rgba(0,232,135,.06);border:1px solid rgba(0,232,135,.14);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;margin-top:.1rem}
+.cert-name{font-size:.84rem;font-weight:600;color:var(--white);margin-bottom:.15rem;line-height:1.4}
+.cert-by{font-family:'JetBrains Mono',monospace;font-size:.67rem;color:var(--muted)}
+.cert-pill{display:inline-block;margin-top:.3rem;font-size:.62rem;border-radius:3px;padding:.1rem .4rem;text-transform:uppercase;letter-spacing:.07em}
+.cert-done{color:var(--cyan);background:rgba(0,200,240,.08);border:1px solid rgba(0,200,240,.18)}
+.cert-prog{color:var(--orange);background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.2)}
+.cert-view{font-size:.68rem;color:var(--green);margin-top:.3rem;display:inline-flex;align-items:center;gap:.25rem}
+
+/* EDUCATION */
+.edu-list{display:flex;flex-direction:column;gap:1rem;max-width:780px}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.3rem 1.5rem;display:flex;gap:1.3rem;align-items:flex-start;transition:border-color .2s}
+.edu-card:hover{border-color:var(--cyan)}
+.edu-ico{width:44px;height:44px;border-radius:9px;background:rgba(0,200,240,.07);border:1px solid rgba(0,200,240,.13);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.edu-deg{font-size:.93rem;font-weight:700;color:var(--white);margin-bottom:.2rem}
+.edu-inst{font-size:.8rem;color:var(--cyan);margin-bottom:.15rem}
+.edu-yr{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
+.edu-note{font-size:.78rem;color:var(--muted);margin-top:.4rem;line-height:1.6}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contact-intro{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:1.8rem}
+.c-items{display:flex;flex-direction:column;gap:.75rem}
+.c-item{display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.85rem 1rem;transition:border-color .2s}
+.c-item:hover{border-color:var(--cyan)}
+.c-ico{width:34px;height:34px;border-radius:7px;background:rgba(0,200,240,.07);border:1px solid rgba(0,200,240,.13);display:flex;align-items:center;justify-content:center;font-size:.88rem;flex-shrink:0}
+.c-lbl{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.c-val{font-size:.83rem;color:var(--text)}
+.c-val a{color:var(--cyan);text-decoration:none}
+.c-val a:hover{text-decoration:underline}
+.profile-box{background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:2rem;text-align:center}
+.pav-ring{width:90px;height:90px;border-radius:50%;padding:2px;background:linear-gradient(135deg,var(--cyan),var(--green));margin:0 auto 1rem}
+.pav-inner{width:100%;height:100%;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;color:var(--cyan);font-family:'JetBrains Mono',monospace;overflow:hidden}
+.pav-inner img{width:100%;height:100%;object-fit:cover}
+.pname{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:.15rem}
+.prole{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);margin-bottom:1.1rem}
+.ptags{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;margin-bottom:1.3rem}
+.ptag{font-size:.65rem;border:1px solid var(--border2);border-radius:3px;padding:.15rem .45rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.pbtn{display:block;background:var(--cyan);color:var(--bg);padding:.62rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.8rem;margin-bottom:.55rem;transition:opacity .2s}
+.pbtn:hover{opacity:.86}
+.pbtn2{display:block;border:1px solid var(--green);color:var(--green);padding:.62rem;border-radius:6px;text-decoration:none;font-size:.8rem;transition:background .2s}
+.pbtn2:hover{background:rgba(0,232,135,.07)}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:1.8rem 5%;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;flex-wrap:wrap;gap:1rem}
+.foot-l{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
+.foot-l span{color:var(--cyan)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-size:.73rem;color:var(--muted);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--cyan)}
+
+/* ANIMATE */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.rev.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:860px){
+  #home{flex-direction:column;gap:2.5rem}.hero-right{width:100%;flex:none}
+  .about-grid,.exp-wrap,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .exp-tabs{flex-direction:row;flex-wrap:wrap}.etab{flex:0 0 auto}
+  .nav-links{display:none}
+}
+@media(max-width:500px){.stats-bar{flex-wrap:wrap}.stat-it{flex:0 0 50%;padding:1rem 0}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#home"><span class="logo-lt">&lt;</span><span>AQ</span><span class="logo-slash">/</span><span class="logo-gt">&gt;</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cv" href="Allauddin_Qazi_CV.pdf" download>⬇ Download CV</a>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-left rev">
+    <div class="status-pill"><span class="sdot"></span>Available for opportunities</div>
+    <div class="eyebrow">IT Infrastructure &amp; Systems Administrator · Pakistan</div>
+    <h1>Allauddin<br><span class="h1-sub">Qazi</span></h1>
+    <p class="hero-tag">user@server:~$ <span class="hl">./whoami</span></p>
+    <p class="hero-desc">Senior IT professional with 6+ years engineering enterprise infrastructure across banking, development, and education sectors. Expert in Cisco networking, Windows Server, VMware virtualization, core banking systems, and IT security compliance.</p>
+    <div class="hero-btns">
+      <a class="btn-p" href="#contact">⚡ Hire Me</a>
+      <a class="btn-s" href="#experience">View Experience →</a>
+      <a class="btn-cv" href="Allauddin_Qazi_CV.pdf" download>⬇ Download CV</a>
+    </div>
+    <div class="social-row">
+      <a class="soc-link" href="https://www.linkedin.com/in/allauddin-it-expert" target="_blank" title="LinkedIn">in</a>
+      <a class="soc-link" href="mailto:allauddin.bits@gmail.com" title="Email">✉</a>
+      <a class="soc-link" href="tel:03452778509" title="Phone">📞</a>
+      <a class="soc-link" href="https://drive.google.com/drive/folders/1beKGEcWTe1zZg55M5V3Fxxn0i3iTic_Z" target="_blank" title="Portfolio">📁</a>
+    </div>
+  </div>
+  <div class="hero-right rev">
+    <div class="terminal">
+      <div class="tbar">
+        <span class="td" style="background:#FF5F57"></span>
+        <span class="td" style="background:#FFBD2E"></span>
+        <span class="td" style="background:#28C840"></span>
+        <span class="ttitle">allauddin@server-pk:~</span>
+        <span class="tping">● ONLINE</span>
+      </div>
+      <div class="tbody">
+        <div><span class="tp">aqazi</span><span class="tm">@server:~$ </span><span class="tw">cat profile.json</span></div>
+        <div><span class="tm">{</span></div>
+        <div>&nbsp;&nbsp;<span class="tc">"name"</span><span class="tm">:</span> <span class="tw">"Allauddin Qazi"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;<span class="tc">"role"</span><span class="tm">:</span> <span class="tw">"IT Infrastructure Administrator"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;<span class="tc">"location"</span><span class="tm">:</span> <span class="tw">"Pakistan"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;<span class="tc">"experience"</span><span class="tm">:</span> <span class="to">"6+ years"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;<span class="tc">"specialization"</span><span class="tm">: [</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tw">"Cisco Networking"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tw">"Windows Server &amp; AD"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tw">"Core Banking IT"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tw">"VMware ESXi / Hyper-V"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tpu">"pfSense / Veeam Backup"</span></div>
+        <div>&nbsp;&nbsp;<span class="tm">],</span></div>
+        <div>&nbsp;&nbsp;<span class="tc">"sla_rate"</span><span class="tm">:</span> <span class="tp">"95%+"</span><span class="tm">,</span></div>
+        <div>&nbsp;&nbsp;<span class="tc">"users_supported"</span><span class="tm">:</span> <span class="to">"5000+"</span></div>
+        <div><span class="tm">}</span></div>
+        <div style="margin-top:.3rem"><span class="tp">aqazi</span><span class="tm">@server:~$ </span><span class="cur"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar rev">
+  <div class="stat-it"><span class="stat-n" data-val="6" data-suffix="+">0</span><div class="stat-l">Years Experience</div></div>
+  <div class="stat-it"><span class="stat-n" data-val="95" data-suffix="%">0</span><div class="stat-l">SLA Resolution</div></div>
+  <div class="stat-it"><span class="stat-n" data-val="5000" data-suffix="+">0</span><div class="stat-l">Users Supported</div></div>
+  <div class="stat-it"><span class="stat-n" data-val="3" data-suffix="">0</span><div class="stat-l">Industry Sectors</div></div>
+  <div class="stat-it"><span class="stat-n" data-val="13" data-suffix="">0</span><div class="stat-l">Certifications</div></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="alt-bg">
+  <p class="slabel">// about.txt</p>
+  <h2 class="stitle">About Me</h2>
+  <div class="about-grid rev">
+    <div class="about-text">
+      <p>I'm <strong style="color:var(--white)">Allauddin Qazi</strong>, a results-driven IT Infrastructure &amp; Systems Administrator based in Pakistan with 6+ years of hands-on experience building, securing, and maintaining enterprise IT environments.</p>
+      <p>My expertise spans Cisco network engineering, Windows Server &amp; Active Directory automation, VMware ESXi virtualization, Core Banking Systems (PIBAS, RTGS, CBS, LOS), Office 365 administration, pfSense firewall management, Veeam Backup &amp; DR, and CCTV infrastructure — across banking, NGO, and education sectors.</p>
+      <p>I'm passionate about writing about technology — sharing real-world knowledge on networking, system administration, cybersecurity, and IT best practices through my blog.</p>
+      <div class="about-facts" style="margin-top:1.4rem">
+        <div class="fact-box"><div class="fact-label">Location</div><div class="fact-val">Pakistan</div></div>
+        <div class="fact-box"><div class="fact-label">Education</div><div class="fact-val">M.CS – Univ. of Karachi</div></div>
+        <div class="fact-box"><div class="fact-label">Email</div><div class="fact-val" style="font-size:.78rem">allauddin.bits@gmail.com</div></div>
+        <div class="fact-box"><div class="fact-label">Availability</div><div class="fact-val" style="color:var(--green)">Open to offers</div></div>
+      </div>
+    </div>
+    <div class="profile-pic-wrap">
+      <div class="profile-pic-ring">
+        <div class="profile-pic-inner">
+          <!-- Replace src with your actual photo URL or upload photo.jpg alongside index.html -->
+          <img src="photo.jpg" alt="Allauddin Qazi" onerror="this.style.display='none';this.parentNode.innerHTML='AQ'">
+        </div>
+      </div>
+      <a class="btn-cv" href="Allauddin_Qazi_CV.pdf" download style="margin-top:.4rem">⬇ Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="slabel">// skills.conf</p>
+  <h2 class="stitle">Technical Skills</h2>
+  <p class="ssub">Technologies I work with daily across enterprise environments.</p>
+  <div class="skills-cols rev">
+    <div class="sk-group">
+      <div class="sk-group-head"><div class="sk-ico">🌐</div><div class="sk-group-name">Networking</div></div>
+      <div class="sk-bars">
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Cisco Switches &amp; Routers</span><span class="sk-bar-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="85"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Cisco APs / Unifi / UBIQUITI</span><span class="sk-bar-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="80"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">VLANs / VPN / LAN/WAN</span><span class="sk-bar-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="85"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">pfSense / OpenDNS / Firewall</span><span class="sk-bar-pct">78%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="78"></div></div></div>
+      </div>
+    </div>
+    <div class="sk-group">
+      <div class="sk-group-head"><div class="sk-ico">🖥️</div><div class="sk-group-name">Windows Server &amp; Systems</div></div>
+      <div class="sk-bars">
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Windows Server 2019</span><span class="sk-bar-pct">88%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="88"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Active Directory &amp; GPO</span><span class="sk-bar-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="85"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Linux (Ubuntu / CentOS)</span><span class="sk-bar-pct">70%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="70"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">PowerShell Automation</span><span class="sk-bar-pct">72%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="72"></div></div></div>
+      </div>
+    </div>
+    <div class="sk-group">
+      <div class="sk-group-head"><div class="sk-ico">⚙️</div><div class="sk-group-name">Virtualization</div></div>
+      <div class="sk-bars">
+        <div><div class="sk-bar-top"><span class="sk-bar-name">VMware ESXi</span><span class="sk-bar-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="80"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Hyper-V</span><span class="sk-bar-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="75"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">VirtualBox</span><span class="sk-bar-pct">78%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="78"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Veeam Backup &amp; DR</span><span class="sk-bar-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="75"></div></div></div>
+      </div>
+    </div>
+    <div class="sk-group">
+      <div class="sk-group-head"><div class="sk-ico">☁️</div><div class="sk-group-name">Cloud &amp; Microsoft 365</div></div>
+      <div class="sk-bars">
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Office 365 Admin Panel</span><span class="sk-bar-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="85"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Exchange Online</span><span class="sk-bar-pct">80%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="80"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Azure AD / MFA</span><span class="sk-bar-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="75"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Google Cloud (in progress)</span><span class="sk-bar-pct">40%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="40"></div></div></div>
+      </div>
+    </div>
+    <div class="sk-group">
+      <div class="sk-group-head"><div class="sk-ico">🏦</div><div class="sk-group-name">Banking IT</div></div>
+      <div class="sk-bars">
+        <div><div class="sk-bar-top"><span class="sk-bar-name">PIBAS / CBS / LOS</span><span class="sk-bar-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="82"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">RTGS / Oracle Client</span><span class="sk-bar-pct">78%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="78"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">SBP DR Site Config</span><span class="sk-bar-pct">75%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="75"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">SLA / ITSM Compliance</span><span class="sk-bar-pct">90%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="90"></div></div></div>
+      </div>
+    </div>
+    <div class="sk-group">
+      <div class="sk-group-head"><div class="sk-ico">🔒</div><div class="sk-group-name">Security &amp; Hardware</div></div>
+      <div class="sk-bars">
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Firewall &amp; IPS/IDS</span><span class="sk-bar-pct">78%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="78"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">CCTV / DVR / NVR</span><span class="sk-bar-pct">82%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="82"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">UPS / Biometric Devices</span><span class="sk-bar-pct">85%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="85"></div></div></div>
+        <div><div class="sk-bar-top"><span class="sk-bar-name">Endpoint Security</span><span class="sk-bar-pct">76%</span></div><div class="sk-bar-bg"><div class="sk-bar-fill" data-w="76"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="alt-bg">
+  <p class="slabel">// career.log</p>
+  <h2 class="stitle">Work Experience</h2>
+  <p class="ssub">A detailed track record built across banking, NGO, and education sectors.</p>
+  <div class="exp-wrap rev">
+    <div class="exp-tabs">
+      <div class="etab on" onclick="xtab(this,'x1')"><span class="etab-dot"></span><div><div class="etab-role">Senior IT Officer</div><div class="etab-co">Ubank · 2026–Now</div></div></div>
+      <div class="etab" onclick="xtab(this,'x2')"><span class="etab-dot"></span><div><div class="etab-role">IT Support Lead</div><div class="etab-co">AKDN · 2025–26</div></div></div>
+      <div class="etab" onclick="xtab(this,'x3')"><span class="etab-dot"></span><div><div class="etab-role">IT Officer / Asst. IT</div><div class="etab-co">AKESP · 2022–25</div></div></div>
+      <div class="etab" onclick="xtab(this,'x4')"><span class="etab-dot"></span><div><div class="etab-role">IT Helpdesk Officer</div><div class="etab-co">IT HUB · 2020–22</div></div></div>
+      <div class="etab" onclick="xtab(this,'x5')"><span class="etab-dot"></span><div><div class="etab-role">IT Technician</div><div class="etab-co">Rehnuma · 2010–12</div></div></div>
+    </div>
+    <div>
+      <!-- UBANK -->
+      <div class="epanel on" id="x1">
+        <div class="ep-role">Senior IT Officer</div>
+        <div class="ep-meta"><span class="ep-co">U Microfinance Bank (Ubank) Pakistan – IT Division</span><span class="ep-date">Jan 2026 – Present</span><span class="ep-badge">Current</span></div>
+        <p class="ep-summary">Delivering mission-critical IT support across a nationwide microfinance banking network — ensuring zero-downtime core banking operations, SBP regulatory compliance, and seamless branch IT infrastructure.</p>
+        <ul class="ep-list">
+          <li><b>Nationwide Branch IT Support:</b> Provide Tier-1 and Tier-2 remote IT support to all Ubank branches across Pakistan and deliver onsite support at Karachi Regional Offices, ensuring zero-downtime banking operations throughout business hours.</li>
+          <li><b>Helpdesk &amp; SLA Management:</b> Manage and resolve branch IT complaints end-to-end through IT Helpdesk Ticket System, email, and telephone — ensuring full ticket closure within defined SLAs and Turnaround Time (TAT) targets; generate trend analysis reports for IT management.</li>
+          <li><b>Core Banking Application Support:</b> Install, configure, and troubleshoot PIBAS (Primary Banking System), RTGS (Real-Time Gross Settlement), CBS (Core Banking System), and LOS (Loan Origination System) on branch workstations and servers — including Oracle Client installation and database connectivity issues.</li>
+          <li><b>Cisco Network Administration:</b> Administer and configure Cisco switches (VLAN setup, port configuration, trunk links, STP, inter-VLAN routing), Cisco ISR routers, and Cisco Access Points — diagnose and resolve Layer 2/3 network issues across branch infrastructure.</li>
+          <li><b>Wireless Network Management:</b> Deploy, configure, and monitor Cisco APs — apply WPA2-Enterprise security policies, manage SSIDs, and resolve wireless interference and connectivity issues at branch level.</li>
+          <li><b>Network Troubleshooting:</b> Diagnose and resolve LAN/WAN connectivity drops, IP address conflicts, VPN tunnel failures, and proxy configuration errors affecting branch banking operations.</li>
+          <li><b>Active Directory &amp; Automation:</b> Administer Microsoft Active Directory — provision user accounts, manage OUs, apply and troubleshoot Group Policy Objects (GPOs), and implement PowerShell automation scripts for bulk account management, password resets, and reporting.</li>
+          <li><b>Office 365 Administration:</b> Manage Office 365 Admin Panel — user lifecycle (onboarding/offboarding), Exchange Online mailbox configuration, license assignment, SharePoint/Teams deployment, Multi-Factor Authentication (MFA) enforcement, and conditional access policies.</li>
+          <li><b>RTGS &amp; SBP DR Site:</b> Configure RTGS connectivity settings and coordinate State Bank of Pakistan (SBP) Disaster Recovery (DR) site setups — ensuring banking business continuity and regulatory compliance for the IT team.</li>
+          <li><b>CCTV Infrastructure:</b> Install, configure, and manage branch CCTV systems and Video Management Software (VMS) — set up IP cameras, DVR/NVR configurations, remote monitoring, and scheduled recording policies for branch security.</li>
+          <li><b>Vendor &amp; Cross-Team Coordination:</b> Coordinate with Network, Server, Application, and Security teams to escalate and resolve Level-2 issues; liaise with external hardware/software vendors for procurement, warranty claims, and technical resolution.</li>
+          <li><b>IT Governance &amp; Compliance:</b> Conduct gap analysis on IT governance frameworks, recommend improvements to control processes and audit readiness, and adhere strictly to SBP IT security regulations and internal operational compliance policies.</li>
+        </ul>
+        <div class="ep-tags"><span class="ep-tag">PIBAS</span><span class="ep-tag">RTGS</span><span class="ep-tag">CBS</span><span class="ep-tag">Cisco Switches</span><span class="ep-tag">Cisco APs</span><span class="ep-tag">Active Directory</span><span class="ep-tag">O365</span><span class="ep-tag">pfSense</span><span class="ep-tag">CCTV</span><span class="ep-tag">SBP DR</span><span class="ep-tag">PowerShell</span></div>
+      </div>
+      <!-- AKDN -->
+      <div class="epanel" id="x2">
+        <div class="ep-role">IT Support Lead</div>
+        <div class="ep-meta"><span class="ep-co">Community Development Foundation – Aga Khan Development Network (AKDN)</span><span class="ep-date">Jan 2025 – Jan 2026</span></div>
+        <p class="ep-summary">Led IT operations for a major development-sector organization across multiple national sites — managing a team of IT staff and delivering enterprise-grade technical solutions under challenging field conditions.</p>
+        <ul class="ep-list">
+          <li><b>Team Leadership &amp; Mentoring:</b> Supervised and led a team of IT support staff — conducted weekly briefings, assigned tasks, reviewed performance, and provided hands-on technical coaching to build team capability across multiple sites.</li>
+          <li><b>Helpdesk Management:</b> Served as primary escalation point for complex technical issues; maintained 95%+ first-contact resolution rate on the helpdesk ticket system; defined SLA tiers, escalation paths, and generated weekly performance reports.</li>
+          <li><b>Windows Server Administration:</b> Administered Windows Server environments (2012/2016/2019) — Active Directory, DNS, DHCP, Group Policy, Remote Desktop Services (RDS), File and Print Services — ensuring high availability and security.</li>
+          <li><b>Linux Server Management:</b> Managed Linux server administration (Ubuntu/CentOS) — user management, cron job scheduling, system monitoring, log analysis, and security hardening to maintain optimal server performance.</li>
+          <li><b>VMware ESXi Virtualization:</b> Administered and optimized VMware ESXi platform — created, managed, and snapshot virtual machines; performed P2V migrations, capacity planning, and resource allocation across the virtualization environment.</li>
+          <li><b>Network &amp; Security Administration:</b> Enforced secure IT practices across WAN, LAN, and VPN infrastructure; managed pfSense firewall rule sets, monitored IDS/IPS alerts, and responded to security incidents promptly.</li>
+          <li><b>Backup &amp; Disaster Recovery:</b> Managed Veeam Backup &amp; Replication solution — defined backup schedules, tested restoration procedures, designed DR procedures, and maintained RPO/RTO targets for critical organizational systems.</li>
+          <li><b>Field Operations:</b> Traveled across Pakistan for remote-site IT support including areas with challenging infrastructure — provided on-site technical assistance during national-level events and high-profile organizational activities.</li>
+          <li><b>IT Policy &amp; Governance:</b> Developed and implemented IT policies, Standard Operating Procedures (SOPs), and IT governance frameworks aligned with organizational and donor compliance requirements.</li>
+          <li><b>Asset Management:</b> Maintained comprehensive IT asset inventory (hardware, software, licenses, peripherals) — managed equipment issuance, warranty tracking, and disposal records across all sites.</li>
+        </ul>
+        <div class="ep-tags"><span class="ep-tag">VMware ESXi</span><span class="ep-tag">Veeam</span><span class="ep-tag">Windows Server</span><span class="ep-tag">Linux</span><span class="ep-tag">pfSense</span><span class="ep-tag">AD/GPO</span><span class="ep-tag">Team Leadership</span><span class="ep-tag">SOPs</span></div>
+      </div>
+      <!-- AKESP -->
+      <div class="epanel" id="x3">
+        <div class="ep-role">IT Officer / Assistant Information Technology</div>
+        <div class="ep-meta"><span class="ep-co">Aga Khan Education Service Pakistan (AKESP)</span><span class="ep-date">May 2022 – Jan 2025</span></div>
+        <p class="ep-summary">Delivered comprehensive IT support and infrastructure management for a multi-campus education network serving 1000+ users — covering server administration, network maintenance, ICT lab setup, and user training.</p>
+        <ul class="ep-list">
+          <li><b>First-Level Technical Support:</b> Provided Tier-1 and Tier-2 IT support for all ICT services and devices — printers, routers, scanners, laptops, desktops, LAN/WAN, Unifi APs, HP Thin Clients, and tablets across all AKESP regional units.</li>
+          <li><b>Network Infrastructure:</b> Maintained and administered the school network infrastructure including firewalls, managed switches, routers, and wireless access points — monitored performance, implemented configurations, and maintained seamless connectivity.</li>
+          <li><b>Server Administration:</b> Managed Windows Server environments (Active Directory, DHCP, DNS, Remote Desktop Services, File/Print Services) — performed regular backups, applied security patches, and monitored server performance.</li>
+          <li><b>Office 365 &amp; Email:</b> Administered Office 365 tenant — user provisioning and deprovisioning, Exchange Online mailbox management, Teams and OneDrive deployment, license compliance, and end-user support for Microsoft applications.</li>
+          <li><b>ICT Lab Design &amp; Maintenance:</b> Designed, implemented, and maintained ICT computer labs across multiple school campuses — structured cabling, network switches, thin clients, tablets, laptops, and Pi-tops ensuring optimal hardware function and connectivity.</li>
+          <li><b>CBT Database Management:</b> Managed Computer-Based Testing (CBT) databases — ensured data integrity and availability during high-stakes examination periods, performed routine database maintenance and access control management.</li>
+          <li><b>Backup &amp; Disaster Recovery:</b> Configured and managed backup solutions for servers and critical systems; implemented and tested disaster recovery procedures to minimize data loss risk and meet organizational RTO/RPO requirements.</li>
+          <li><b>Security &amp; Compliance:</b> Implemented and monitored IT security policies including firewall configurations, endpoint protection, and intrusion prevention; ensured compliance with ICT policies and organizational IT standards.</li>
+          <li><b>Asset Management &amp; Documentation:</b> Maintained updated inventory records for all ICT hardware, software, and network equipment; managed procurement documentation (GRN, PR, Gate Pass, Equipment Issue Forms).</li>
+          <li><b>Preventive Maintenance:</b> Conducted quarterly preventive maintenance and servicing of all ICT equipment — troubleshot and repaired faulty hardware; liaised with external service providers for complex repairs.</li>
+          <li><b>User Training:</b> Provided technical training to staff on new technologies, IT systems, and software; promoted IT literacy and best practices across academic and administrative teams.</li>
+        </ul>
+        <div class="ep-tags"><span class="ep-tag">Active Directory</span><span class="ep-tag">Unifi APs</span><span class="ep-tag">Thin Clients</span><span class="ep-tag">CBT Databases</span><span class="ep-tag">O365</span><span class="ep-tag">ICT Labs</span><span class="ep-tag">Preventive Maintenance</span></div>
+      </div>
+      <!-- IT HUB -->
+      <div class="epanel" id="x4">
+        <div class="ep-role">IT Helpdesk Officer</div>
+        <div class="ep-meta"><span class="ep-co">IT HUB / Academy</span><span class="ep-date">Jan 2020 – Mar 2022</span></div>
+        <p class="ep-summary">Delivered high-volume helpdesk and field IT support in a fast-paced technology services environment — building strong expertise in network design, user support, device deployment, and IT operations management.</p>
+        <ul class="ep-list">
+          <li><b>SLA Performance:</b> Achieved 95%+ helpdesk request resolution rate within one working day — communicated resolution outcomes to end-users and supervisors, consistently exceeding SLA targets and maintaining high user satisfaction scores.</li>
+          <li><b>Device Deployment:</b> Installed and deployed new IT devices (desktops, laptops, network equipment, peripherals) within one week of receipt in alignment with CapEx guidelines — ensured rapid operational readiness for all new equipment.</li>
+          <li><b>Network Design &amp; Implementation:</b> Designed and implemented network layouts for multiple sites — planned IP addressing schemes, designed structured cabling topologies, selected appropriate hardware, and commissioned fully functional LAN environments.</li>
+          <li><b>Computer Lab Management:</b> Managed and supervised computer labs across multiple campuses — scheduled maintenance windows, managed lab bookings, enforced usage policies, and ensured hardware availability and readiness for training sessions.</li>
+          <li><b>Biometric System Setup:</b> Configured and installed biometric attendance systems — enrolled users, set up attendance schedules, integrated with HR systems, and provided end-user training and ongoing troubleshooting support.</li>
+          <li><b>IT Operations Management:</b> Planned, organized, monitored, and evaluated IT data operations — identified system bottlenecks, implemented performance optimizations, and maintained operational continuity across the IT environment.</li>
+          <li><b>Hardware Support:</b> Performed regular hardware maintenance including RAM upgrades, HDD replacements, thermal cleaning, and peripheral repairs — extended equipment lifecycle and minimized hardware-related downtime.</li>
+          <li><b>Software Management:</b> Installed, configured, and updated operating systems (Windows 7/8/10, Linux) and software applications — ensured all systems were patched, secure, and malware-free.</li>
+        </ul>
+        <div class="ep-tags"><span class="ep-tag">Helpdesk</span><span class="ep-tag">LAN Design</span><span class="ep-tag">Biometric</span><span class="ep-tag">SLA</span><span class="ep-tag">Device Deployment</span><span class="ep-tag">Lab Management</span></div>
+      </div>
+      <!-- REHNUMA -->
+      <div class="epanel" id="x5">
+        <div class="ep-role">IT Technician</div>
+        <div class="ep-meta"><span class="ep-co">Rehnuma Computer Institute</span><span class="ep-date">Jul 2010 – Dec 2012</span></div>
+        <p class="ep-summary">Entry-level technical role that established a strong practical foundation in hardware repair, software support, and network maintenance — the starting point of a 6+ year IT career.</p>
+        <ul class="ep-list">
+          <li><b>Technical Support:</b> Diagnosed and resolved hardware, software, and basic network issues for student and faculty end-users — maintained high equipment availability across institute facilities.</li>
+          <li><b>Remote &amp; Onsite Support:</b> Provided both remote and on-site support for desktops, laptops, printers, and peripherals — logged all issues and tracked resolutions to maintain service records.</li>
+          <li><b>OS Installation &amp; Configuration:</b> Installed, configured, and updated operating systems (Windows XP/7) and software applications — ensured systems were optimally configured for academic and administrative use.</li>
+          <li><b>Preventive Maintenance:</b> Performed regular preventive maintenance — thermal cleaning, RAM and HDD health checks, hardware upgrades, and peripheral repairs to extend equipment lifecycle.</li>
+          <li><b>Network Support:</b> Assisted in setup, configuration, and maintenance of LAN, WAN, and basic wireless networks across institute premises — supported uninterrupted network connectivity for classrooms and labs.</li>
+        </ul>
+        <div class="ep-tags"><span class="ep-tag">Hardware Repair</span><span class="ep-tag">OS Installation</span><span class="ep-tag">LAN/WAN</span><span class="ep-tag">User Support</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="slabel">// services.list</p>
+  <h2 class="stitle">What I Do</h2>
+  <p class="ssub">End-to-end IT infrastructure services I provide to organizations.</p>
+  <div class="svc-grid rev">
+    <div class="svc-card"><div class="svc-ico">🌐</div><div class="svc-name">Network Design &amp; Administration</div><div class="svc-desc">Design, deploy, and manage enterprise LAN/WAN networks. Configure Cisco switches, routers, VLANs, VPNs, and wireless APs for maximum performance and reliability.</div></div>
+    <div class="svc-card"><div class="svc-ico">🖥️</div><div class="svc-name">Windows Server &amp; Active Directory</div><div class="svc-desc">Full lifecycle management of Windows Server environments — AD provisioning, GPO enforcement, DHCP/DNS, RDS, and PowerShell automation for enterprise user management.</div></div>
+    <div class="svc-card"><div class="svc-ico">⚙️</div><div class="svc-name">Virtualization &amp; Cloud</div><div class="svc-desc">Deploy and manage VMware ESXi, Hyper-V, and VirtualBox environments. Office 365 administration, Azure AD, MFA, and conditional access policy management.</div></div>
+    <div class="svc-card"><div class="svc-ico">🔒</div><div class="svc-name">IT Security &amp; Firewall</div><div class="svc-desc">Implement and manage pfSense firewalls, IPS/IDS, endpoint security, and IT security policies. Ensure compliance with regulatory requirements including SBP IT directives.</div></div>
+    <div class="svc-card"><div class="svc-ico">💾</div><div class="svc-name">Backup &amp; Disaster Recovery</div><div class="svc-desc">Design and implement Veeam backup solutions, DR planning, restoration testing, and RPO/RTO management to ensure business continuity for critical systems.</div></div>
+    <div class="svc-card"><div class="svc-ico">🎫</div><div class="svc-name">IT Helpdesk &amp; Support</div><div class="svc-desc">SLA-driven Tier-1 &amp; Tier-2 IT support, helpdesk ticketing management, incident reporting, and team training — delivering consistent 95%+ resolution rates.</div></div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="alt-bg">
+  <p class="slabel">// blog.posts</p>
+  <h2 class="stitle">Tech Blog</h2>
+  <p class="ssub">Real-world IT guides from the field — networking, systems, security, and cloud.</p>
+  <div class="blog-grid rev">
+    <a class="blog-card" href="#blog"><div class="blog-img">🌐</div><div class="blog-body"><div class="blog-cat">Networking</div><div class="blog-title">Understanding VLANs: A Practical Guide for Network Administrators</div><div class="blog-excerpt">VLANs are fundamental to modern network design. Learn how to segment your network, improve security, and reduce broadcast traffic with this hands-on guide.</div><div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read →</span></div></div></a>
+    <a class="blog-card" href="#blog"><div class="blog-img">🔒</div><div class="blog-body"><div class="blog-cat">Security</div><div class="blog-title">pfSense Firewall Setup: From Zero to Enterprise-Grade Security</div><div class="blog-excerpt">A step-by-step walkthrough of setting up pfSense for enterprise environments — covering rules, VPN, IDS/IPS, and traffic monitoring best practices.</div><div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read →</span></div></div></a>
+    <a class="blog-card" href="#blog"><div class="blog-img">🖥️</div><div class="blog-body"><div class="blog-cat">Windows Server</div><div class="blog-title">Active Directory Automation with PowerShell: Bulk User Management</div><div class="blog-excerpt">Stop creating users one by one. Automate AD provisioning, OU management, and GPO assignment using PowerShell scripts — a real-world guide.</div><div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read →</span></div></div></a>
+    <a class="blog-card" href="#blog"><div class="blog-img">☁️</div><div class="blog-body"><div class="blog-cat">Cloud</div><div class="blog-title">Office 365 Admin: Security Hardening Checklist for IT Administrators</div><div class="blog-excerpt">A comprehensive checklist covering MFA, conditional access, Exchange Online hardening, and audit logging for your Microsoft 365 tenant.</div><div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read →</span></div></div></a>
+    <a class="blog-card" href="#blog"><div class="blog-img">💾</div><div class="blog-body"><div class="blog-cat">Virtualization</div><div class="blog-title">VMware ESXi: Building Your First Home Lab on a Budget</div><div class="blog-excerpt">Discover how to build a fully functional ESXi home lab using affordable second-hand servers and free licenses — no enterprise budget needed.</div><div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read →</span></div></div></a>
+    <a class="blog-card" href="#blog"><div class="blog-img">🏦</div><div class="blog-body"><div class="blog-cat">Banking IT</div><div class="blog-title">IT Infrastructure in Microfinance Banks: Challenges &amp; Best Practices</div><div class="blog-excerpt">Banking IT has unique challenges — compliance, uptime, core banking systems, and SBP regulations. A guide based on real-world Pakistan banking IT experience.</div><div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read →</span></div></div></a>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <p class="slabel">// certificates.log</p>
+  <h2 class="stitle">Certifications</h2>
+  <p class="ssub">Verified credentials — click any certificate to view the original document.</p>
+  <div class="cert-grid rev">
+    <a class="cert-card" href="https://drive.google.com/open?id=1mcKp9jwXcgOyoAdYXpNN0Bl8SA9cDqB8" target="_blank">
+      <div class="cert-ico">🌐</div><div><div class="cert-name">CCNA – Enterprise Networking, Security &amp; Automation</div><div class="cert-by">Cisco Networking Academy</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1YanGV4M42G-mLKGF4SeqdNIsCh-ExlPQ" target="_blank">
+      <div class="cert-ico">🛡️</div><div><div class="cert-name">CyberOps Associate</div><div class="cert-by">Cisco Networking Academy</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1IY6gFaHXYdZQQHNVxqnrhICzYFcsfXXK" target="_blank">
+      <div class="cert-ico">🔐</div><div><div class="cert-name">Cybersecurity Essentials</div><div class="cert-by">Cisco Networking Academy</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1LDxZOri-JLsZPuwx_Qwke2Dts6ba3AmL" target="_blank">
+      <div class="cert-ico">🔑</div><div><div class="cert-name">Introduction to CyberSecurity</div><div class="cert-by">Cisco Networking Academy</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=10tlv-Wu8-p4fsc5pWwlHCTOfOAt8tXsJ" target="_blank">
+      <div class="cert-ico">💻</div><div><div class="cert-name">IT Essentials</div><div class="cert-by">Cisco Networking Academy · 2023</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1kHfpzL_NqqXUp1AgoKXb2DtNAgsOVpwU" target="_blank">
+      <div class="cert-ico">🎓</div><div><div class="cert-name">Technical Support Fundamentals</div><div class="cert-by">Google / Coursera</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1PRja07Uqh--aauGipuGxEwfWWqRr_hhc" target="_blank">
+      <div class="cert-ico">🌍</div><div><div class="cert-name">The Bits and Bytes of Computer Networking</div><div class="cert-by">Google / Coursera</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1FBFqDQCX4dJtYwVoBQQbjkiOQ9SLhZKD" target="_blank">
+      <div class="cert-ico">⚙️</div><div><div class="cert-name">System Administration &amp; IT Infrastructure Services</div><div class="cert-by">Google / Coursera</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1wsRI1D_YZeY9ms_IshYH2eeJtI7juS-B" target="_blank">
+      <div class="cert-ico">🖥️</div><div><div class="cert-name">OS and You: Becoming a Power User</div><div class="cert-by">Google / Coursera</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1caxMWxrIVwefjr5l2rM-fXZeZUO1UCT0" target="_blank">
+      <div class="cert-ico">🔏</div><div><div class="cert-name">Personal Security Certificate of Achievement</div><div class="cert-by">Professional Development</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1DpoYLV6hBmwBdygtt7m_tIy00Rls7r6s" target="_blank">
+      <div class="cert-ico">🐍</div><div><div class="cert-name">Programming for Everybody with Python</div><div class="cert-by">University of Michigan / Coursera</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1ZB9_XKK_K2hHNp8V1ZEjjbYXg7AHvXK6" target="_blank">
+      <div class="cert-ico">🤖</div><div><div class="cert-name">AI for Everyone</div><div class="cert-by">DeepLearning.AI / Coursera</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <a class="cert-card" href="https://drive.google.com/open?id=1aPDh4wfwSorZPwQwIs_XrDJQpmde9AeE" target="_blank">
+      <div class="cert-ico">🗣️</div><div><div class="cert-name">Soft Communication Skills</div><div class="cert-by">Professional Development</div><span class="cert-pill cert-done">Completed</span><div class="cert-view">🔗 View Certificate →</div></div>
+    </a>
+    <div class="cert-card" style="border-style:dashed;border-color:rgba(255,107,53,.3)">
+      <div class="cert-ico" style="background:rgba(255,107,53,.06);border-color:rgba(255,107,53,.2)">☁️</div><div><div class="cert-name">Associate Cloud Engineer</div><div class="cert-by">Google Cloud Platform</div><span class="cert-pill cert-prog">In Progress</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="alt-bg">
+  <p class="slabel">// education.db</p>
+  <h2 class="stitle">Education</h2>
+  <p class="ssub">Academic foundation powering technical expertise.</p>
+  <div class="edu-list rev">
+    <div class="edu-card"><div class="edu-ico">🎓</div><div><div class="edu-deg">Master of Computer Science (M.CS)</div><div class="edu-inst">University of Karachi – UBIT</div><div class="edu-yr">2016 – 2018</div><div class="edu-note">Specialization in Networking, Operating Systems &amp; Database Management. Thesis focus: Network Security &amp; Intrusion Detection Systems.</div></div></div>
+    <div class="edu-card"><div class="edu-ico">💻</div><div><div class="edu-deg">Bachelor of Science in Computer Science (B.Sc.)</div><div class="edu-inst">Shaheed Benazir Bhutto University</div><div class="edu-yr">2013 – 2015</div><div class="edu-note">Software Engineering, Data Structures, System Analysis, and Technical Programming fundamentals.</div></div></div>
+    <div class="edu-card"><div class="edu-ico">📐</div><div><div class="edu-deg">Intermediate in Computer Science (F.Sc.)</div><div class="edu-inst">Govt. Degree College Chitral, KPK</div><div class="edu-yr">2011 – 2013</div><div class="edu-note">Physics, Mathematics &amp; Computer Science — foundational programming and algorithm design.</div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="slabel">// contact.sh</p>
+  <h2 class="stitle">Get In Touch</h2>
+  <p class="ssub">Open to senior IT roles, network engineering, and consulting opportunities.</p>
+  <div class="contact-grid rev">
+    <div>
+      <p class="contact-intro">Whether you need a hands-on network engineer, a reliable IT infrastructure lead, or a banking technology specialist — I bring 6+ years of real-world enterprise experience and a proven track record of delivering results. Let's build something solid together.</p>
+      <div class="c-items">
+        <div class="c-item"><div class="c-ico">📞</div><div><div class="c-lbl">Phone</div><div class="c-val">0345-2778509 / 0331-9202485</div></div></div>
+        <div class="c-item"><div class="c-ico">✉️</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:allauddin.bits@gmail.com">allauddin.bits@gmail.com</a></div></div></div>
+        <div class="c-item"><div class="c-ico">💼</div><div><div class="c-lbl">LinkedIn</div><div class="c-val"><a href="https://www.linkedin.com/in/allauddin-it-expert" target="_blank">linkedin.com/in/allauddin-it-expert</a></div></div></div>
+        <div class="c-item"><div class="c-ico">📁</div><div><div class="c-lbl">Portfolio &amp; Certificates</div><div class="c-val"><a href="https://drive.google.com/drive/folders/1beKGEcWTe1zZg55M5V3Fxxn0i3iTic_Z" target="_blank">Google Drive Portfolio →</a></div></div></div>
+        <div class="c-item"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Pakistan · Open to relocation</div></div></div>
+      </div>
+    </div>
+    <div class="profile-box">
+      <div class="pav-ring">
+        <div class="pav-inner">
+          <img src="photo.jpg" alt="Allauddin Qazi" onerror="this.style.display='none';this.parentNode.innerHTML='AQ'">
+        </div>
+      </div>
+      <div class="pname">Allauddin Qazi</div>
+      <div class="prole">IT Infrastructure &amp; Systems Administrator</div>
+      <div class="ptags">
+        <span class="ptag">Cisco</span><span class="ptag">VMware</span><span class="ptag">AD/GPO</span>
+        <span class="ptag">O365</span><span class="ptag">Core Banking</span><span class="ptag">pfSense</span>
+        <span class="ptag">Veeam</span><span class="ptag">Linux</span><span class="ptag">CCTV</span>
+      </div>
+      <a class="pbtn" href="mailto:allauddin.bits@gmail.com">✉ Send Email</a>
+      <a class="pbtn2" href="Allauddin_Qazi_CV.pdf" download>⬇ Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-l"><span>&lt;AQ/&gt;</span> · Allauddin Qazi · IT Infrastructure &amp; Systems Administrator · Pakistan · <span>© 2011–2026</span> All rights reserved.</div>
+  <div class="foot-links">
+    <a href="#home">Home</a><a href="#skills">Skills</a>
+    <a href="#experience">Experience</a><a href="#certs">Certs</a>
+    <a href="#blog">Blog</a><a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+function xtab(el,id){
+  document.querySelectorAll('.etab').forEach(t=>t.classList.remove('on'));
+  document.querySelectorAll('.epanel').forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');document.getElementById(id).classList.add('on');
+}
+const ro=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.07});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+const bro=new IntersectionObserver(en=>{
+  if(en[0].isIntersecting){document.querySelectorAll('.sk-bar-fill').forEach(b=>{b.style.width=b.dataset.w+'%'});bro.disconnect();}
+},{threshold:.15});
+bro.observe(document.querySelector('#skills'));
+const cro=new IntersectionObserver(en=>{
+  if(en[0].isIntersecting){
+    document.querySelectorAll('[data-val]').forEach(el=>{
+      const t=+el.dataset.val,sf=el.dataset.suffix||'';
+      let c=0;const s=Math.max(t/50,1);
+      const iv=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(iv);}el.textContent=Math.round(c)+sf;},30);
+    });
+    cro.disconnect();
+  }
+},{threshold:.3});
+cro.observe(document.querySelector('.stats-bar'));
+</script>
+</body>
+</html>
